@@ -1,3 +1,33 @@
-.list-group-item {
-  line-height: 2.5;
+html {
+  background-color: #60C2A5;
+}
+
+#maincontainer {
+  margin-top: 40%; 
+}
+
+#add, #search {
+  height: 100px;
+  width: 100px; 
+  display: block;
+  background-color: #a0ffc9;
+  border-color: #a0ffc9; 
+}
+
+#icon {
+  margin:0; 
+}
+
+#searchcolumn {
+  margin: 0 0 0 9%; 
+}
+
+.fa-plus-square, .fa-search {
+  font-size: 45px; 
+  margin-top: 15px;
+}
+
+#signin {
+  background-color: #ed6d73; 
+  border-color: #ed6d73; 
 }
