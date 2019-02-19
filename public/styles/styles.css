@@ -1,5 +1,5 @@
 html {
-  background: linear-gradient(#60C2A5, #2e2b35) fixed;
+  background: linear-gradient(#fffafb, #a0ffc9) fixed;
 }
 
 body {
@@ -24,6 +24,18 @@ body {
   font-weight: bold;
 }
 
+#symptomseverity2 {
+ width: 200px; 
+}
+
+.addButtons, #symptomadd {
+  background-color: #ed6d73; 
+  font-weight: bold; 
+  font-size: 18px;
+  border: 2px solid #2e2b35; 
+  width: 200px; 
+}
+
 #icon {
   margin:0; 
 }
@@ -31,6 +43,22 @@ body {
 .fa-plus-square, .fa-search {
   font-size: 45px; 
   margin-top: 15px;
+}
+
+.fa-notes-medical {
+  font-size: 50px; 
+}
+
+#addcontainer {
+  margin-top: 50%
+}
+
+#symptomtext {
+  width: 200px; 
+}
+
+#symptomtext::placeholder {
+  text-align: center;
 }
 
 #signin {
@@ -46,7 +74,7 @@ body {
   color: #60C2A5;
 }
 
-#signin:hover {
+#signin:hover, .addButtons:hover, #symptomadd:hover {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
@@ -58,7 +86,7 @@ body {
   color: #60C2A5;
 }
 
-#signin:active {
+#signin:active, .addButtons:active, #symptomadd:active {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
