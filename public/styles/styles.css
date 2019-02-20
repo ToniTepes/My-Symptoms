@@ -1,11 +1,17 @@
-html {
-  background: linear-gradient(#fffafb, #a0ffc9) fixed;
+body {
+  background-image: linear-gradient(#fffafb, #a0ffc9);
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100vh;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
 }
 
+.wrapper {
+  min-height: 100%;
+}
 .logo-image {
   padding-right: 2%;
   padding-left: 5%;
