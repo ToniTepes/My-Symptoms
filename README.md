@@ -51,3 +51,5 @@ CREATE TABLE users (
 
 .MySQL
     - Trying to fix two errors in current 'shema' and 'login'
+    - Get rid of user name and use email
+    - Work on verifycation
