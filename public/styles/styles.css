@@ -1,17 +1,9 @@
-
-
 html {
-  background: linear-gradient(#60C2A5, #2e2b35) fixed !important;
-  background-size: cover !important; 
-  height: 100% !important; 
+  background: linear-gradient(#60C2A5, #2e2b35) fixed;
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
-  height: 100%; 
-  margin: 0;
-  background-repeat: no-repeat;
-  background-attachment: fixed;
 }
 
 .logo-image {
@@ -21,80 +13,56 @@ body {
   margin-bottom: 0px;
 }
 
-#add, #search {
+#add,
+#search {
   height: 100px;
-  width: 100px; 
+  width: 100px;
   display: block;
   background-color: #a0ffc9;
-  border: 2px solid #2e2b35; 
+  border: 2px solid #2e2b35;
   padding-top: 2px;
   font-size: 18px;
   font-weight: bold;
 }
 
-#symptomseverity2 {
- width: 200px; 
-}
-
-.addButtons, #symptomadd {
-  background-color: #ed6d73; 
-  font-weight: bold; 
-  font-size: 18px;
-  border: 2px solid #2e2b35; 
-  width: 200px; 
-}
-
 #icon {
-  margin:0; 
+  margin: 0;
 }
 
-.fa-plus-square, .fa-search {
-  font-size: 45px; 
+.fa-plus-square,
+.fa-search {
+  font-size: 45px;
   margin-top: 15px;
 }
 
-.fa-notes-medical {
-  font-size: 50px; 
-}
-
-#addcontainer {
-  margin-top: 50%
-}
-
-#symptomtext {
-  width: 200px; 
-}
-
-#symptomtext::placeholder {
-  text-align: center;
-}
-
 #signin {
-  background-color: #ed6d73; 
-  border: 2px solid #2e2b35; 
+  background-color: #ed6d73;
+  border: 2px solid #2e2b35;
   font-size: 18px;
   font-weight: bold;
 }
 
-.buttons #add:hover, .buttons #search:hover {
+.buttons #add:hover,
+.buttons #search:hover {
   background-color: #2e2b35;
   border: 2px solid #60C2A5;
   color: #60C2A5;
 }
 
-#signin:hover, .addButtons:hover, #symptomadd:hover {
+#signin:hover {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
 }
 
-.buttons #add:active, .buttons #search:active {
+.buttons #add:active,
+.buttons #search:active {
   background-color: #2e2b35;
   border: 2px solid #60C2A5;
   color: #60C2A5;
 }
 
-#signin:active, .addButtons:active, #symptomadd:active {
+#signin:active {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
