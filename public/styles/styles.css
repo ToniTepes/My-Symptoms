@@ -1,9 +1,17 @@
+
+
 html {
-  background: linear-gradient(#fffafb, #a0ffc9) fixed;
+  background: linear-gradient(#60C2A5, #2e2b35) fixed !important;
+  background-size: cover !important; 
+  height: 100% !important; 
 }
 
 body {
   font-family: 'Source Sans Pro', sans-serif;
+  height: 100%; 
+  margin: 0;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
 }
 
 .logo-image {
