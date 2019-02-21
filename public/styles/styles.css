@@ -20,7 +20,7 @@ body {
 }
 
 #add,
-#search {
+#search, #home {
   height: 100px;
   width: 100px;
   display: block;
@@ -49,7 +49,7 @@ body {
 }
 
 .fa-plus-square,
-.fa-search {
+.fa-search, .fa-home {
   font-size: 45px;
   margin-top: 15px;
 }
