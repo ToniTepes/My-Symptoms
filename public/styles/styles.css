@@ -24,14 +24,19 @@ body {
 }
 
 .input,
+.button,
 #symptomseverity {
   border: 2px solid #2e2b35;
+  height: 40px;
 }
 
 #symptomcontainer,
 #signupcontainer,
-#signincontainer {
-  margin-top: 50%
+#signincontainer,
+#addcontainer,
+#foodcontainer,
+#drinkcontainer {
+  margin-top: 40%
 }
 
 #add,
@@ -53,7 +58,9 @@ body {
 .addButtons,
 #symptomadd,
 #signupsubmit,
-#signupbutton {
+#signupbutton,
+#foodadd,
+#drinkadd {
   background-color: #ed6d73;
   font-weight: bold;
   font-size: 18px;
@@ -75,10 +82,6 @@ body {
   font-size: 50px;
 }
 
-#addcontainer {
-  margin-top: 50%;
-}
-
 #symptomtext {
   width: 200px;
 }
@@ -89,7 +92,8 @@ body {
 #email::placeholder, 
 #password::placeholder,
 #signinemail::placeholder,
-#signinpassword::placeholder {
+#signinpassword::placeholder,
+#foodtext::placeholder {
   text-align: center;
   color: #60c2a5;
 }
@@ -112,7 +116,9 @@ body {
 .addButtons:hover,
 #symptomadd:hover,
 #signupsubmit:hover,
-#signupbutton:hover {
+#signupbutton:hover,
+#foodadd:hover,
+#drinkadd:hover {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
@@ -128,8 +134,10 @@ body {
 #signin:active,
 .addButtons:active,
 #symptomadd:active,
-#signupsubmit:active 
-#signupbutton:active {
+#signupsubmit:active,
+#signupbutton:active,
+#foodadd:active,
+#drinkadd:active {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
