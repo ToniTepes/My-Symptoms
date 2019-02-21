@@ -1,10 +1,10 @@
 ### Dear Doctor
 ***
 ## Team Members:
-• Sydney Dunlap
-• Antonio Foushee
-• Laura Shortridge 
-• Robert Tarkenton	
+* Sydney Dunlap
+* Antonio Foushee
+* Laura Shortridge 
+* Robert Tarkenton	
 ***
 ## Project Description:
 Our app will enable people to record their symptoms (and severity), along with their intake of food and liquid. This log can be shared with their healthcare provider.
@@ -22,5 +22,4 @@ We would like to add the ability to track correlations between the symptoms and 
 * Must not expose sensitive API key information on the server, see Protecting-API-Keys-In-Node.md
 ***
 ## New technology used:
-• BULMA (CSS)
-***
+* BULMA (CSS)
