@@ -93,7 +93,8 @@ body {
 #password::placeholder,
 #signinemail::placeholder,
 #signinpassword::placeholder,
-#foodtext::placeholder {
+#foodtext::placeholder,
+#drinktext::placeholder {
   text-align: center;
   color: #60c2a5;
 }
