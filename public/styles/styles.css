@@ -106,6 +106,15 @@ body {
   font-weight: bold;
 }
 
+#centerfix {
+  text-align: center;
+}
+
+#marginfix {
+  margin: 0; 
+  box-sizing: unset;
+}
+
 .buttons #add:hover,
 .buttons #search:hover {
   background-color: #2e2b35;
@@ -142,4 +151,24 @@ body {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
+}
+
+@media only screen and (min-width: 1050px) {
+  .logo-image {
+    padding-top: 0;
+    margin-bottom: 0 !important; 
+  }
+  
+  #mainimage {
+    width: 40%; 
+  }
+
+  #symptomcontainer,
+  #signupcontainer,
+  #signincontainer,
+  #addcontainer,
+  #foodcontainer,
+  #drinkcontainer {
+    margin-top: 10%
+  }
 }
