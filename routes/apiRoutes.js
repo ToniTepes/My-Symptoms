@@ -6,9 +6,9 @@
 
 // Dependencies
 // =============================================================
-var Symptom = require("../models/index.js");
-var Food = require("../models/index.js");
-var Drink = require("../models/index.js");
+var Symptom = require("../models/symptom.js");
+var Food = require("../models/food.js");
+var Drink = require("../models/drink.js");
 
 // Routes
 // =============================================================
