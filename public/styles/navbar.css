@@ -17,6 +17,8 @@
 #navbaritem {
     margin: auto;
     color: #2e2b35;
+    height: 45px;
+    width: 45px;
 }
 
 #home:hover {
