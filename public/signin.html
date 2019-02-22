@@ -3,37 +3,47 @@
 
 <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" href="../public/styles/reset.css">
+    <link rel="stylesheet" href="./assets/styles/reset.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
     <script defer src="https://use.fontawesome.com/releases/v5.3.1/js/all.js"></script>
     <link href="https://fonts.googleapis.com/css?family=Source+Sans+Pro" rel="stylesheet">
 
-    <link rel="stylesheet" href="../public/styles/styles.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./assets/styles/styles.css" media="screen" title="no title" charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <link rel="stylesheet" href="..//public/styles/greenbackground.css" media="screen" title="no title" charset="utf-8">
+    <link rel="stylesheet" href="./assets/styles/greenbackground.css" media="screen" title="no title" charset="utf-8">
     <link
     rel="stylesheet"
-    href="..//public/styles/navbar.css"
+    href="./assets/styles/navbar.css"
     media="screen"
     title="no title"
     charset="utf-8"
   />
-    <title>Food Page</title>
+    <title>Sign In Page</title>
 </head>
 
 <body id="symptombackground" class="has-navbar-fixed-bottom">
-    <div class="container has-text-centered" id="foodcontainer">
+    <div class="container has-text-centered" id="signincontainer">
         <div class="block title is-1">
-            <h1>Food</h1>
+            <h1>Sign In</h1>
         </div>
         <div class="field is-grouped is-grouped-centered">
             <div class="control">
-                <input class="input" type="text" placeholder="Enter Food Here" id="foodtext">
+                <input class="input" type="text" placeholder="Email" id="signinemail">
+            </div>
+        </div>
+        <div class="field is-grouped is-grouped-centered">
+            <div class="control">
+                <input class="input" type="text" placeholder="Password" id="signinpassword">
             </div>
         </div>
         <div class="block">
-            <button class="button" id="foodadd">
-                Add
+            <button class="button" id="signupsubmit">
+                Submit
+            </button>
+        </div>
+        <div class="block">
+            <button class="button" id="signupbutton">
+                Sign Up
             </button>
         </div>
     </div>
