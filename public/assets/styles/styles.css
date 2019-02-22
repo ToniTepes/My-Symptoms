@@ -31,12 +31,15 @@ body {
 }
 
 #symptomcontainer,
-#signupcontainer,
 #signincontainer,
 #addcontainer,
 #foodcontainer,
 #drinkcontainer {
   margin-top: 40%
+}
+
+#signupcontainer {
+  margin-top: 20%
 }
 
 #add,
