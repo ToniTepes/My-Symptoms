@@ -19,7 +19,6 @@ body {
   margin-bottom: 0px;
 }
 
-<<<<<<< HEAD
 .control {
   margin-bottom: 12px; 
 }
@@ -42,10 +41,6 @@ body {
 
 #add,
 #search {
-=======
-#add,
-#search, #home {
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
   height: 100px;
   width: 100px;
   display: block;
@@ -56,24 +51,16 @@ body {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
-#symptomseverity {
-=======
-#symptomseverity2 {
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
+#symptomseverity, #symptomseverity2 {
   width: 200px;
 }
 
 .addButtons,
-<<<<<<< HEAD
 #symptomadd,
 #signupsubmit,
 #signupbutton,
 #foodadd,
 #drinkadd {
-=======
-#symptomadd {
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
   background-color: #ed6d73;
   font-weight: bold;
   font-size: 18px;
@@ -86,31 +73,23 @@ body {
 }
 
 .fa-plus-square,
-<<<<<<< HEAD
-.fa-search {
-=======
 .fa-search, .fa-home {
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
   font-size: 45px;
   margin-top: 15px;
 }
 
 .fa-notes-medical {
   font-size: 50px;
-<<<<<<< HEAD
-=======
 }
 
 #addcontainer {
   margin-top: 50%;
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
 }
 
 #symptomtext {
   width: 200px;
 }
 
-<<<<<<< HEAD
 #symptomtext::placeholder, 
 #firstname::placeholder, 
 #lastname::placeholder, 
@@ -119,10 +98,8 @@ body {
 #signinemail::placeholder,
 #signinpassword::placeholder,
 #foodtext::placeholder,
-#drinktext::placeholder {
-=======
+#drinktext::placeholder,
 #symptomtext::placeholder {
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
   text-align: center;
   color: #60c2a5;
 }
@@ -134,7 +111,6 @@ body {
   font-weight: bold;
 }
 
-<<<<<<< HEAD
 #centerfix {
   text-align: center;
 }
@@ -144,8 +120,6 @@ body {
   box-sizing: unset;
 }
 
-=======
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
 .buttons #add:hover,
 .buttons #search:hover {
   background-color: #2e2b35;
@@ -155,15 +129,11 @@ body {
 
 #signin:hover,
 .addButtons:hover,
-<<<<<<< HEAD
 #symptomadd:hover,
 #signupsubmit:hover,
 #signupbutton:hover,
 #foodadd:hover,
-#drinkadd:hover {
-=======
-#symptomadd:hover {
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
+#drinkadd:hover, #symptomadd:hover {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
@@ -178,20 +148,15 @@ body {
 
 #signin:active,
 .addButtons:active,
-<<<<<<< HEAD
 #symptomadd:active,
 #signupsubmit:active,
 #signupbutton:active,
 #foodadd:active,
-#drinkadd:active {
-=======
-#symptomadd:active {
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
+#drinkadd:active, #symptomadd:active {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
 }
-<<<<<<< HEAD
 
 @media only screen and (min-width: 1050px) {
   .logo-image {
@@ -212,5 +177,3 @@ body {
     margin-top: 10%
   }
 }
-=======
->>>>>>> 519a3a80926fc394e20833606955e924cd0882a3
