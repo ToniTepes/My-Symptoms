@@ -22,14 +22,6 @@
         "no-multi-spaces": "error",
         "no-unused-vars": "error",
         "camelcase": "error",
-        "indent": [
-            "error",
-            2
-        ],
-        "linebreak-style": [
-            "error",
-            "unix"
-        ],
         "quotes": [
             "error",
             "double"
@@ -38,6 +30,6 @@
             "error",
             "always"
         ],
-        "prettier/prettier": "error"
+        "prettier/prettier": "warn"
     }
 }
