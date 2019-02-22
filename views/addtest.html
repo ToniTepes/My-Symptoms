@@ -25,11 +25,18 @@
     />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
     <link rel="stylesheet" href="..//public/styles/greenbackground.css" media="screen" title="no title" charset="utf-8">
+    <link
+    rel="stylesheet"
+    href="..//public/styles/navbar.css"
+    media="screen"
+    title="no title"
+    charset="utf-8"
+  />
     <title>Add Page</title>
   </head>
 
   <body>
-    <div class="container has-text-centered" id="addcontainer">
+    <div class="container has-text-centered has-navbar-fixed-bottom" id="addcontainer">
       <div class="block title is-1">
         <h1>Add</h1>
       </div>
@@ -52,6 +59,23 @@
       </div>
     </div>
 
+    <nav
+    class="navbar is-fixed-bottom"
+    role="navigation"
+    aria-label="main navigation"
+  >
+    <div class="navbar-brand">
+      <a class="navbar-item">
+        <i class="fas fa-plus-square" id="navbaritem"></i>
+      </a>
+      <a class="navbar-item">
+        <i class="fas fa-home" id="home"></i>
+      </a>
+      <a class="navbar-item">
+        <i class="fas fa-search" id="navbaritem"></i>
+      </a>
+    </div>
+  </nav>
     <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
 <script src="/js/index.js"></script> -->
   </body>
