@@ -13,7 +13,7 @@ body {
 }
 
 .logo-image {
-  padding-right: 2%;
+  padding-right: 5%;
   padding-left: 5%;
   padding-top: 10%;
   margin-bottom: 0px;
@@ -34,7 +34,8 @@ body {
 #signincontainer,
 #addcontainer,
 #foodcontainer,
-#drinkcontainer {
+#drinkcontainer,
+#addsymptomcontainer {
   margin-top: 40%
 }
 
@@ -54,8 +55,12 @@ body {
   font-weight: bold;
 }
 
-#symptomseverity, #symptomseverity2 {
+#symptomseverity {
   width: 200px;
+}
+
+#symptomseverity::after {
+  border-color: pink !important;
 }
 
 .addButtons,
@@ -85,12 +90,21 @@ body {
   font-size: 50px;
 }
 
-#addcontainer {
-  margin-top: 50%;
-}
-
 #symptomtext {
   width: 200px;
+}
+
+#symptomseverity:active,
+#symptomseverity:focus {
+  box-shadow: none !important; 
+}
+
+#arrow {
+  border-color: pink !important; 
+}
+
+#diarytable {
+  margin: 0 5% 0 5% !important; 
 }
 
 #symptomtext::placeholder, 
@@ -123,6 +137,10 @@ body {
   box-sizing: unset;
 }
 
+#diaryimage {
+  width: 50%;
+}
+
 .buttons #add:hover,
 .buttons #search:hover {
   background-color: #2e2b35;
@@ -141,6 +159,16 @@ body {
   border: 2px solid #ed6d73;
   color: #ed6d73;
 }
+
+#drinktext:hover, 
+#drinktext:focus,
+#foodtext:hover,
+#foodtext:focus,
+#symptomtext:hover,
+#symptomtext:focus {
+  border: 2px solid #ed6d73;
+}
+
 
 .buttons #add:active,
 .buttons #search:active {
@@ -161,7 +189,7 @@ body {
   color: #ed6d73;
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1025px) {
   .logo-image {
     padding-top: 0;
     margin-bottom: 0 !important; 
@@ -171,12 +199,31 @@ body {
     width: 40%; 
   }
 
+  #diaryimage {
+    width: 20%;
+  }
+
   #symptomcontainer,
   #signupcontainer,
   #signincontainer,
   #addcontainer,
   #foodcontainer,
-  #drinkcontainer {
+  #drinkcontainer,
+  #addsymptomcontainer {
     margin-top: 10%
+  }
+}
+
+@media only screen and (max-width: 415px) and (min-width: 365px) {
+  
+  #mainimage {
+    padding-top: 15%
+  }
+
+  #addcontainer,
+  #drinkcontainer,
+  #foodcontainer,
+  #addsymptomcontainer {
+    padding-top: 15%;
   }
 }
