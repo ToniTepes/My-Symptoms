@@ -35,11 +35,11 @@
     <title>Diary Page</title>
   </head>
 
-  <div class="container has-text-centered has-navbar-fixed-bottom" id="addcontainer">
+  <div class="container has-text-centered has-navbar-fixed-bottom" id="diarycontainer">
         <div class="block logo-image">
                 <img src="../public/assets/images/deardoctornotagnobg.gif" alt="" id="mainimage"/>
               </div>
-        <div class="block">
+        <div class="block" id="diarytable">
             <table class="table is-striped is-bordered is-fullwidth">
                 <thead>
                     <tr>
@@ -48,7 +48,7 @@
                         <th>Description</th>
                     </tr>
                 </thead>
-                <tbody>
+                <tbody id="well-section">
                     <!-- This is where the data will print from JavaScript files-->
                 </tbody>
             </table>
@@ -73,7 +73,7 @@
           </a>
     </div>
   </nav>
-    <!-- <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-<script src="/js/index.js"></script> -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="/js/diary.js"></script>
   </body>
 </html>
