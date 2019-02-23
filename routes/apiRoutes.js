@@ -6,9 +6,10 @@
 
 // Dependencies
 // =============================================================
-var Symptom = require("../models/symptom.js");
-var Food = require("../models/food.js");
-var Drink = require("../models/drink.js");
+var Symptom = require("../models/symptommodel.js");
+var Food = require("../models/foodmodel.js");
+var Drink = require("../models/drinkmodel.js");
+var Diary = require("../models/diarymodel.js")
 
 // Routes
 // =============================================================
@@ -49,8 +50,8 @@ module.exports = function(app) {
     });
 
   // Get all entries
-  app.get("/api/all", function(req, res) {
-    Symptom.findAll({}).then(function(results) {
+  app.get("/api/diary", function(req, res) {
+    Diary.findAll({}).then(function(results) {
       res.json(results);
     });
   });

@@ -3,17 +3,15 @@
 // *********************************************************************************
 
 // Dependencies
-var Sequelize = require("sequelize");
+const Sequelize = require('sequelize');  
+const env = require('dotenv');
 
-// Creates mySQL connection using Sequelize, the empty string in the third argument spot is our password.
-var sequelize = new Sequelize("deardoctor_db", "root", "4Eronica!", {
-  host: "localhost",
-  port: 3306,
-  dialect: "mysql",
-  pool: {
-    max: 5,
-    min: 0,
-    idle: 10000
+const sequelize = new Sequelize(env.DATABASE_NAME, env.DATABASE_USERNAME, env.DATABASE_PASSWORD, {  
+  host: env.DATABASE_HOST,
+  port: env.DATABASE_PORT,
+  dialect: 'mysql',
+  define: {
+    underscored: true
   }
 });
 
