@@ -26,6 +26,10 @@ body {
   margin-bottom: 0px;
 }
 
+#deardoctorsignup {
+  padding-top: 0; 
+}
+
 .control {
   margin-bottom: 12px; 
 }
@@ -172,7 +176,19 @@ body {
 #foodtext:hover,
 #foodtext:focus,
 #symptomtext:hover,
-#symptomtext:focus {
+#symptomtext:focus,
+#signinemail:hover,
+#signinemail:focus,
+#signinpassword:hover,
+#signinpassword:focus,
+#firstname:hover,
+#firstname:focus,
+#lastname:hover,
+#lastname:focus,
+#email:hover,
+#email:focus,
+#password:hover,
+#password:focus {
   border: 2px solid #ed6d73;
 }
 
@@ -190,7 +206,8 @@ body {
 #signupsubmit:active,
 #signupbutton:active,
 #foodadd:active,
-#drinkadd:active, #symptomadd:active {
+#drinkadd:active, 
+#symptomadd:active {
   background-color: #2e2b35;
   border: 2px solid #ed6d73;
   color: #ed6d73;
@@ -208,10 +225,15 @@ body {
     margin-right: auto;
     margin-bottom: 0 !important;
     width: 40%;
+    padding-top: 0; 
   }
   
   #mainimage {
     width: 40%; 
+  }
+
+  #mainimagediary {
+    width: 25%; 
   }
 
   #diaryimage {
@@ -231,8 +253,13 @@ body {
 
 @media only screen and (max-width: 415px) and (min-width: 365px) {
   
-  #mainimage {
-    padding-top: 15%
+  #mainimage,
+  #mainimagediary {
+    padding-top: 0;
+  }
+
+  #mainimagediary {
+    width: 50%;
   }
 
   #addcontainer,
@@ -240,5 +267,40 @@ body {
   #foodcontainer,
   #addsymptomcontainer {
     padding-top: 15%;
+  }
+}
+
+@media only screen and (max-width: 359px) {
+  #signupcontainer {
+    margin-top: 0; 
+  }
+
+  .logo-image2 {
+    margin-bottom: 0 !important; 
+  }
+
+  #mainimagediary {
+    width: 50%; 
+  }
+}
+
+@media only screen and (max-width: 364px) {
+  #signupcontainer,
+  #signincontainer {
+    margin-top: 3%; 
+  }
+
+  .logo-image2 {
+    margin-bottom: 0 !important; 
+  }
+
+  #mainimagediary {
+    width: 50%; 
+  }
+}
+
+@media only screen and (min-width: 700px) and (max-width: 1024px) {
+  #mainimagediary {
+    width: 50%; 
   }
 }
