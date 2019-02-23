@@ -39,9 +39,14 @@ app.use(passport.session());
 // app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/user-apiRoutes")(app);
+require("./routes/symptom-apiRoutes")(app);
+require("./routes/food-apiRoutes")(app);
+require("./routes/drink-apiRoutes")(app);
+require("./routes/diary-apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
 require("./routes/auth")(app, passport);
+
 
 const models = require("./models");
 require("./config/passport/passport")(passport, models.User);
