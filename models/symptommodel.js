@@ -1,19 +1,45 @@
-// Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references my connection to the DB.
-var sequelize = require("../config/connection.js");
+module.exports = function(sequelize, DataTypes) {
+  const Symptom = sequelize.define("Symptom", {
+    text: {
+      type: DataTypes.TEXT,
+      allowNull: false
+    },
+    severity: DataTypes.STRING
+  });
 
-// Creates a model that matches up with DB
-var Symptom = sequelize.define("symptom", {
-  symptom: Sequelize.STRING,
-  severity: Sequelize.STRING
-});
+  Symptom.associate = models => {
+    Symptom.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+    Symptom.belongsTo(models.User, {
+      foreignKey: {
+        allowNull: false
+      }
+    });
+  };
+  return Symptom;
+};
 
-// Syncs with DB
-Symptom.sync();
 
-// Makes the Symptom Model available for other files (will also create a table)
-module.exports = Symptom;
+
+// // Sequelize (capital) references the standard library
+// var Sequelize = require("sequelize");
+// // sequelize (lowercase) references my connection to the DB.
+// var sequelize = require("../config/connection.js");
+
+// // Creates a model that matches up with DB
+// var Symptom = sequelize.define("symptom", {
+//   symptom: Sequelize.STRING,
+//   severity: Sequelize.STRING
+// });
+
+// // Syncs with DB
+// Symptom.sync();
+
+// // Makes the Symptom Model available for other files (will also create a table)
+// module.exports = Symptom;
 
 
 //original
