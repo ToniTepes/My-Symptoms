@@ -1,7 +1,7 @@
 {
   "development": {
     "username": "root",
-    "password": "your-password-here, but we'll update with secure/hidden",
+    "password": "4Eronica!",
     "database": "deardoctor_db",
     "host": "localhost",
     "dialect": "mysql"
