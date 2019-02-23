@@ -19,6 +19,13 @@ body {
   margin-bottom: 0px;
 }
 
+.logo-image2 {
+  padding-right: 5%;
+  padding-left: 5%;
+  padding-top: 10%;
+  margin-bottom: 0px;
+}
+
 .control {
   margin-bottom: 12px; 
 }
@@ -36,7 +43,7 @@ body {
 #foodcontainer,
 #drinkcontainer,
 #addsymptomcontainer {
-  margin-top: 40%
+  margin-top: 20%
 }
 
 #signupcontainer {
@@ -194,6 +201,14 @@ body {
     padding-top: 0;
     margin-bottom: 0 !important; 
   }
+
+  .logo-image2 {
+    margin-top: 2%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 0 !important;
+    width: 40%;
+  }
   
   #mainimage {
     width: 40%; 
@@ -210,7 +225,7 @@ body {
   #foodcontainer,
   #drinkcontainer,
   #addsymptomcontainer {
-    margin-top: 10%
+    margin-top: 5%
   }
 }
 
