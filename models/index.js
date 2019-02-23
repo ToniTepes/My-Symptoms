@@ -1,31 +1,75 @@
-'use strict'
-//const env = require('dotenv');  
-const Sequelize = require('sequelize');  
-const sequelize = require("../config/connection.js");
+"use strict";
 
-// Connect all the models/tables in the database to a db object, 
-//so everything is accessible via one object
+const fs = require("fs");
+const path = require("path");
+const Sequelize = require("sequelize");
+const basename = path.basename(module.filename);
+const env = process.env.NODE_ENV || "development";
+const config = require("../config/config.js")[env];
 const db = {};
+let sequelize;
+if (config.jawsDB) {
+  sequelize = new Sequelize(process.env[config.jawsDB]);
+} else {
+  sequelize = new Sequelize(
+    config.database,
+    config.username,
+    config.password,
+    config
+  );
+}
 
-db.Sequelize = Sequelize;  
+fs.readdirSync(__dirname)
+  .filter(function(file) {
+    return (
+      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+    );
+  })
+  .forEach(function(file) {
+    const model = sequelize.import(path.join(__dirname, file));
+    db[model.name] = model;
+  });
+
+Object.keys(db).forEach(function(modelName) {
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
+  }
+});
+
 db.sequelize = sequelize;
+db.Sequelize = Sequelize;
 
-//Models/tables
-db.users = require('../models/users.js');
-db.symptom = require('../models/symptommodel.js');//(sequelize, Sequelize);  
-db.food = require('../models/foodmodel.js');//(sequelize, Sequelize);  
-db.drink = require('../models/drinkmodel.js');//(sequelize, Sequelize);
-
-//Relations
-//db.users.hasMany(db.symptom);
-//db.users.hasMany(db.food);
-//db.users.hasMany(db.drink);
-db.symptom.belongsTo(db.users);  
-db.food.belongsTo(db.users);  
-db.drink.belongsTo(db.users);  
+module.exports = db;
 
 
-module.exports = db;  
+// 'use strict'
+// //const env = require('dotenv');  
+// const Sequelize = require('sequelize');  
+// const sequelize = require("../config/connection.js");
+
+// // Connect all the models/tables in the database to a db object, 
+// //so everything is accessible via one object
+// const db = {};
+
+// db.Sequelize = Sequelize;  
+// db.sequelize = sequelize;
+
+// //Models/tables
+// db.users = require('../models/users.js');
+// db.symptom = require('../models/symptommodel.js');//(sequelize, Sequelize);  
+// db.food = require('../models/foodmodel.js');//(sequelize, Sequelize);  
+// db.drink = require('../models/drinkmodel.js');//(sequelize, Sequelize);
+
+// //Relations
+// //db.users.hasMany(db.symptom);
+// //db.users.hasMany(db.food);
+// //db.users.hasMany(db.drink);
+// db.symptom.belongsTo(db.users);  
+// db.food.belongsTo(db.users);  
+// db.drink.belongsTo(db.users);  
+
+
+// module.exports = db;  
 
 
 //=============== this section just works, yo ==============
