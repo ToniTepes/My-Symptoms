@@ -6,132 +6,132 @@
 
 // Dependencies
 // =============================================================
-var Symptom = require("../models/symptommodel.js");
-var Food = require("../models/foodmodel.js");
-var Drink = require("../models/drinkmodel.js");
-var Diary = require("../models/diarymodel.js")
+const Symptom = require("../models/symptommodel.js");
+const Food = require("../models/foodmodel.js");
+const Drink = require("../models/drinkmodel.js");
+const Diary = require("../models/index.js")
 
 // Routes
 // =============================================================
-module.exports = function(app) {
+module.exports = function (app) {
 
   // Add a symptom
-  app.post("/api/symptom", function(req, res) {
+  app.post("/api/symptom", function (req, res) {
     console.log("Symptom:");
     console.log(req.body);
     Symptom.create({
       symptom: req.body.symptom,
       severity: req.body.severity
-    }).then(function(results) {
+    }).then(function (results) {
       res.json(results);
     });
   });
 
   // Add a food
-  app.post("/api/food", function(req, res) {
+  app.post("/api/food", function (req, res) {
     console.log("Food:");
     console.log(req.body);
     Food.create({
       food: req.body.food
-    }).then(function(results) {
+    }).then(function (results) {
       res.json(results);
     });
   });
 
-    // Add a drink
-    app.post("/api/drink", function(req, res) {
-      console.log("Drink:");
-      console.log(req.body);
-      Drink.create({
-        drink: req.body.drink
-      }).then(function(results) {
-        res.json(results);
-      });
+  // Add a drink
+  app.post("/api/drink", function (req, res) {
+    console.log("Drink:");
+    console.log(req.body);
+    Drink.create({
+      drink: req.body.drink
+    }).then(function (results) {
+      res.json(results);
     });
+  });
 
   // Get all entries
-  app.get("/api/diary", function(req, res) {
-    Diary.findAll({}).then(function(results) {
+  app.get("/api/diary", function (req, res) {
+    Diary.findAll({}).then(function (results) {
       res.json(results);
     });
   });
 
   // Get a specific symptom
-  app.get("/api/:symptom", function(req, res) {
+  app.get("/api/:symptom", function (req, res) {
     Symptom.findAll({
       where: {
         symptom: req.params.symptom
       }
-    }).then(function(results) {
+    }).then(function (results) {
       res.json(results);
     });
   });
+}
+//   // Get all books of a specific genre
+//   app.get("/api/genre/:genre", function(req, res) {
+//     Book.findAll({
+//       where: {
+//         genre: req.params.genre
+//       }
+//     }).then(function(results) {
+//       res.json(results);
+//     });
+//   });
 
-  // Get all books of a specific genre
-  app.get("/api/genre/:genre", function(req, res) {
-    Book.findAll({
-      where: {
-        genre: req.params.genre
-      }
-    }).then(function(results) {
-      res.json(results);
-    });
-  });
+//   // Get all books from a specific author
+//   app.get("/api/author/:author", function(req, res) {
+//     Book.findAll({
+//       where: {
+//         author: req.params.author
+//       }
+//     }).then(function(results) {
+//       res.json(results);
+//     });
+//   });
 
-  // Get all books from a specific author
-  app.get("/api/author/:author", function(req, res) {
-    Book.findAll({
-      where: {
-        author: req.params.author
-      }
-    }).then(function(results) {
-      res.json(results);
-    });
-  });
+//   // Get all "long" books (books 150 pages or more)
+//   app.get("/api/books/long", function(req, res) {
+//     Book.findAll({
+//       where: {
+//         pages: {
+//           $gte: 150
+//         }
+//       },
+//       order: [["pages", "DESC"]]
+//     }).then(function(results) {
+//       res.json(results);
+//     });
+//   });
 
-  // Get all "long" books (books 150 pages or more)
-  app.get("/api/books/long", function(req, res) {
-    Book.findAll({
-      where: {
-        pages: {
-          $gte: 150
-        }
-      },
-      order: [["pages", "DESC"]]
-    }).then(function(results) {
-      res.json(results);
-    });
-  });
+//   // Get all "short" books (books 150 pages or less)
+//   app.get("/api/books/short", function(req, res) {
+//     Book.findAll({
+//       where: {
+//         pages: {
+//           $lte: 150
+//         }
+//       },
+//       order: [["pages", "ASC"]]
+//     }).then(function(results) {
+//       res.json(results);
+//     });
+//   });
 
-  // Get all "short" books (books 150 pages or less)
-  app.get("/api/books/short", function(req, res) {
-    Book.findAll({
-      where: {
-        pages: {
-          $lte: 150
-        }
-      },
-      order: [["pages", "ASC"]]
-    }).then(function(results) {
-      res.json(results);
-    });
-  });
 
-  
 
-  // Delete a book
-  app.delete("/api/book/:id", function(req, res) {
-    console.log("Book ID:");
-    console.log(req.params.id);
-    Book.destroy({
-      where: {
-        id: req.params.id
-      }
-    }).then(function() {
-      res.end();
-    });
-  });
-};
+//   // Delete a book
+//   app.delete("/api/book/:id", function(req, res) {
+//     console.log("Book ID:");
+//     console.log(req.params.id);
+//     Book.destroy({
+//       where: {
+//         id: req.params.id
+//       }
+//     }).then(function() {
+//       res.end();
+//     });
+//   });
+// };
 
 //original 
 // var db = require("../models");
@@ -238,5 +238,3 @@ module.exports = function(app) {
 //         res.json(dbDrink);
 //       });
 //   });
-// })
-// } 

@@ -1,31 +1,54 @@
 require("dotenv").config();
-var express = require("express");
-var exphbs = require("express-handlebars");
+const express = require("express");
+//const exphbs = require("express-handlebars");
+const passport = require("passport");
+const session = require("express-session");
+const flash = require("connect-flash");
 
-var db = require("./models");
+const db = require("./models");
 
-var app = express();
-var PORT = process.env.PORT || 3000;
+const app = express();
+const PORT = process.env.PORT || 3000;
 
 // Middleware
-app.use(express.urlencoded({ extended: false }));
+app.use(express.urlencoded({
+  extended: false
+}));
 app.use(express.json());
 app.use(express.static("public"));
+app.use(flash());
 
-// Handlebars
-app.engine(
-  "handlebars",
-  exphbs({
-    defaultLayout: "main"
+// Passport
+app.use(
+  session({
+    secret: 'clever girl', //process.env.SESSION_SECRET,
+    resave: true,
+    saveUnitialized: true
   })
 );
-app.set("view engine", "handlebars");
+app.use(passport.initialize());
+app.use(passport.session());
+
+// Handlebars
+// app.engine(
+//   "handlebars",
+//   exphbs({
+//     defaultLayout: "main"
+//   })
+// );
+// app.set("view engine", "handlebars");
 
 // Routes
 require("./routes/apiRoutes")(app);
 require("./routes/htmlRoutes")(app);
+require("./routes/auth")(app, passport);
 
-var syncOptions = { force: false };
+const models = require("./models");
+require("./config/passport/passport")(passport, models.User);
+
+const syncOptions = {
+  force: false
+};
 
 // If running a test, set syncOptions.force to true
 // clearing the `testdb`
@@ -34,8 +57,8 @@ if (process.env.NODE_ENV === "test") {
 }
 
 // Starting the server, syncing our models ------------------------------------/
-db.sequelize.sync(syncOptions).then(function() {
-  app.listen(PORT, function() {
+db.sequelize.sync(syncOptions).then(function () {
+  app.listen(PORT, function () {
     console.log(
       "==> 🌎  Listening on port %s. Visit http://localhost:%s/ in your browser.",
       PORT,

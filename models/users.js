@@ -1,32 +1,46 @@
-module.exports = function(sequelize, DataTypes) {
-  var user = sequelize.define("user", {
-    username: {
+module.exports = function (sequelize, DataTypes) {
+  const User = sequelize.define("User", {
+    email: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [1, 50]
-      }
+        isEmail: true
+      },
+      unique: true
     },
-
     firstname: {
       type: DataTypes.TEXT,
       allowNull: false
     },
-
     lastname: {
       type: DataTypes.TEXT,
       allowNull: false
     },
-
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
         min: 6
       }
-    } //,
-    // createdAt: Sequelize.DATE,
-    // updatedAt: Sequelize.DATE
+    },
+    lastLogin: DataTypes.DATE,
+    status: {
+      type: DataTypes.ENUM("active", "inactive"),
+      defaultValue: "active"
+    }
   });
-  return user;
+
+  User.associate = models => {
+    User.hasMany(models.Symptom, {
+      onDelete: "cascade"
+    });
+    User.hasMany(models.Food, {
+      onDelete: "cascade"
+    });
+    User.hasMany(models.Drink, {
+      onDelete: "cascade"
+    });
+  };
+
+  return User;
 };
