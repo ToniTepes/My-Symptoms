@@ -34,7 +34,8 @@ body {
 #signincontainer,
 #addcontainer,
 #foodcontainer,
-#drinkcontainer {
+#drinkcontainer,
+#addsymptomcontainer {
   margin-top: 40%
 }
 
@@ -54,8 +55,12 @@ body {
   font-weight: bold;
 }
 
-#symptomseverity, #symptomseverity2 {
+#symptomseverity {
   width: 200px;
+}
+
+#symptomseverity::after {
+  border-color: pink !important;
 }
 
 .addButtons,
@@ -87,6 +92,15 @@ body {
 
 #symptomtext {
   width: 200px;
+}
+
+#symptomseverity:active,
+#symptomseverity:focus {
+  box-shadow: none !important; 
+}
+
+#arrow {
+  border-color: pink !important; 
 }
 
 #diarytable {
@@ -146,6 +160,16 @@ body {
   color: #ed6d73;
 }
 
+#drinktext:hover, 
+#drinktext:focus,
+#foodtext:hover,
+#foodtext:focus,
+#symptomtext:hover,
+#symptomtext:focus {
+  border: 2px solid #ed6d73;
+}
+
+
 .buttons #add:active,
 .buttons #search:active {
   background-color: #2e2b35;
@@ -165,7 +189,7 @@ body {
   color: #ed6d73;
 }
 
-@media only screen and (min-width: 1050px) {
+@media only screen and (min-width: 1025px) {
   .logo-image {
     padding-top: 0;
     margin-bottom: 0 !important; 
@@ -184,13 +208,22 @@ body {
   #signincontainer,
   #addcontainer,
   #foodcontainer,
-  #drinkcontainer {
+  #drinkcontainer,
+  #addsymptomcontainer {
     margin-top: 10%
   }
 }
 
-@media only screen and (max-width: 415px) {
+@media only screen and (max-width: 415px) and (min-width: 365px) {
+  
   #mainimage {
     padding-top: 15%
+  }
+
+  #addcontainer,
+  #drinkcontainer,
+  #foodcontainer,
+  #addsymptomcontainer {
+    padding-top: 15%;
   }
 }
