@@ -20,9 +20,14 @@ db.drink = require('../models/drinkmodel.js');//(sequelize, Sequelize);
 //db.users.hasMany(db.symptom);
 //db.users.hasMany(db.food);
 //db.users.hasMany(db.drink);
-db.symptom.belongsTo(db.users);  
-db.food.belongsTo(db.users);  
-db.drink.belongsTo(db.users);  
+db.associate = function (models) {
+    db.symptom.belongsTo(models.users);  
+    db.food.belongsTo(models.users);  
+    db.drink.belongsTo(models.users);  
+}
+// db.symptom.belongsTo(models.users);  
+// db.food.belongsTo(models.users);  
+// db.drink.belongsTo(models.users);  
 
 
 module.exports = db;  

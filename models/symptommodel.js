@@ -15,7 +15,6 @@ Symptom.sync();
 // Makes the Symptom Model available for other files (will also create a table)
 module.exports = Symptom;
 
-
 //original
 // "use strict";
 

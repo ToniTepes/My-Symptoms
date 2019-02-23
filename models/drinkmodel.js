@@ -5,7 +5,7 @@ var sequelize = require("../config/connection.js");
 
 // Creates a model that matches up with DB
 var Drink = sequelize.define("drink", {
-    drink: Sequelize.STRING
+  drink: Sequelize.STRING
 });
 
 // Syncs with DB

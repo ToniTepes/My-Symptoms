@@ -9,7 +9,7 @@
 var Symptom = require("../models/symptommodel.js");
 var Food = require("../models/foodmodel.js");
 var Drink = require("../models/drinkmodel.js");
-var Diary = require("../models/diarymodel.js")
+// var Diary = require("../models/diarymodel.js")
 
 // Routes
 // =============================================================

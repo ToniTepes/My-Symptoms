@@ -19,3 +19,6 @@ $.get("/api/index", function(data) {
     $("#diary-well-" + i).append("<h4>On Date: " + createdAt + "</h4>");
   }
 });
+
+// $("#diary-well-" + i).append("")
+//
