@@ -39,11 +39,11 @@ app.use(passport.session());
 // app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/user-apiRoutes")(app);
-require("./routes/symptom-apiRoutes")(app);
-require("./routes/food-apiRoutes")(app);
-require("./routes/drink-apiRoutes")(app);
-require("./routes/diary-apiRoutes")(app);
+require("./routes/user-apiRoute")(app);
+require("./routes/symptom-apiRoute")(app);
+require("./routes/food-apiRoute")(app);
+require("./routes/drink-apiRoute")(app);
+require("./routes/diary-apiRoute")(app);
 require("./routes/htmlRoutes")(app);
 require("./routes/auth")(app, passport);
 
