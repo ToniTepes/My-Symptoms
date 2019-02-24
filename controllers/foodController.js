@@ -1,11 +1,10 @@
-const db = require("../models/foodmodel.js");
+const db = require("../models");
 let foodController = module.exports;
 
 foodController.postFood = (req, res) => {
     console.log(req.body);
-    db.Food.create({
-      food: req.body.food
-    }).then(function (results) {
+    let data = {food: req.body.food};
+    db.Food.create(data).then(function (results) {
       res.json(results);
     });
   }
