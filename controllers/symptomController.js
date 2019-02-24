@@ -1,12 +1,10 @@
-const db = require("../models/symptommodel.js");
+const db = require("../models");
 let symptomController = module.exports;
 
 symptomController.postSymptom = (req, res) => {
     console.log(req.body);
-    db.Symptom.create({
-      symptom: req.body.symptom,
-      severity: req.body.severity
-    }).then(function (results) {
+    let data = {symptom: req.body.symptom, severity: req.body.severity};
+    db.Symptom.create(data).then(function (results) {
       res.json(results);
     });
   }
