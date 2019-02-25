@@ -22,7 +22,7 @@ if (config.jawsDB) {
 fs.readdirSync(__dirname)
   .filter(function(file) {
     return (
-      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+      file.indexOf(".") !== 0 && file !== "index.js"
     );
   })
   .forEach(function(file) {
@@ -31,7 +31,7 @@ fs.readdirSync(__dirname)
   });
 
 Object.keys(db).forEach(function(modelName) {
-  if (db[modelName].associate) {
+  if ("associate" in db[modelName]) {
     db[modelName].associate(db);
   }
 });

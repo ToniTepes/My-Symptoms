@@ -1,13 +1,15 @@
 require("dotenv").config();
 const express = require("express");
 //const exphbs = require("express-handlebars");
-const passport = require("passport");
-const session = require("express-session");
 const flash = require("connect-flash");
-
+const models = require("./models");
 const db = require("./models");
 
 const app = express();
+const passport = require("passport");
+const session = require("express-session");
+const bodyParser = require("body-parser");
+const env = require('dotenv').load();
 const PORT = process.env.PORT || 3000;
 
 // Middleware
@@ -17,6 +19,10 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(express.static("public"));
 app.use(flash());
+
+// BodyParser
+app.use(bodyParser.urlencoded({ extended: true}));
+app.use(bodyParser.json());
 
 // Passport
 app.use(
@@ -28,6 +34,13 @@ app.use(
 );
 app.use(passport.initialize());
 app.use(passport.session());
+
+// Sync Database
+models.sequelize.sync().then(function(){
+  console.log("Nice! Database looks fine!");
+}).catch(function(err) {
+  console.log(err, "Something went wrong with the database update.")
+})
 
 // Handlebars
 // app.engine(
@@ -48,7 +61,7 @@ require("./routes/htmlRoutes")(app);
 require("./routes/auth")(app, passport);
 
 
-const models = require("./models");
+// const models = require("./models");
 require("./config/passport/passport")(passport, models.User);
 
 const syncOptions = {
