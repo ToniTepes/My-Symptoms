@@ -1,4 +1,7 @@
-var db = require("../models");
+const db = require("../models");
+const path = require("path");
+const isAuthenticated = require("../config/middleware/isAuthenticated");
+
 
 module.exports = function(app) {
   // Load index page

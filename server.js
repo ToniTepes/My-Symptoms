@@ -1,14 +1,20 @@
 require("dotenv").config();
 const express = require("express");
-const passport = require("passport");
+const passport = require("./config/passport");
 const session = require("express-session");
 const flash = require("connect-flash");
+const bodyParser = require("body-parser");
 // const exphbs = require("express-handlebars");
 
 const db = require("./models");
 
 const app = express();
 const PORT = process.env.PORT || 3000;
+
+// We need to use sessions to keep track of our user's login status
+app.use(session({ secret: "keyboard cat", resave: true, saveUninitialized: true }));
+app.use(passport.initialize());
+app.use(passport.session());
 
 // Middleware
 app.use(express.urlencoded({
@@ -17,6 +23,10 @@ app.use(express.urlencoded({
 app.use(express.json());
 app.use(express.static("public"));
 app.use(flash());
+
+//For body parser
+app.use(bodyParser.urlencoded({ extended: false }));
+//app.use(bodyParser.json());
 
 // Passport
 app.use(
@@ -46,10 +56,12 @@ require("./routes/drink-apiRoute")(app);
 require("./routes/diary-apiRoute")(app);
 require("./routes/htmlRoutes")(app);
 require("./routes/auth")(app, passport);
+require("./routes/htmlroutes.js")(app);
+require("./routes/apiroutes.js")(app);
 
 
 const models = require("./models");
-require("./config/passport/passport")(passport, models.User);
+require("./config/passport")(passport, models.User);
 
 const syncOptions = {
   force: false
