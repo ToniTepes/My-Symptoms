@@ -1,5 +1,5 @@
 // Make a get request to our api route that will return complete diary
-$.get("/api/index", function(data) {
+$.get("/api/all", function(data) {
   // For each diary entry that our server sends us back
   for (var i = 0; i < data.length; i++) {
     // Create a parent div to hold diary data
@@ -13,9 +13,9 @@ $.get("/api/index", function(data) {
 
     // Now  we add our diary data to the well we just placed on the page
     // eslint-disable-next-line prettier/prettier
-    $("#diary-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].symptom + "</h2>");
-    $("#diary-well-" + i).append("<h3>Food: " + data[i].food + "</h4>");
-    $("#diary-well-" + i).append("<h3>Drink: " + data[i].drink + "</h4>");
-    $("#diary-well-" + i).append("<h4>On Date: " + createdAt + "</h4>");
+    $("#diary-well-" + i).append("<h2>" + (i + 1) + ". " + data[i].type+ "</h2>");
+    $("#diary-well-" + i).append("<h3>" + data[i].description + "</h4>");
+    $("#diary-well-" + i).append("<h3>" + data[i].severity + "</h4>");
+    $("#diary-well-" + i).append("<h4>" + createdAt + "</h4>");
   }
 });
