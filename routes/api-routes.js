@@ -97,18 +97,33 @@ module.exports = function(app) {
 
 //   });
 
-  // Add a diary entry
-  app.post("/api/new", function(req, res) {
+  // Add a diary symptom
+  app.post("/api/symptom", function(req, res) {
 
-    console.log("Diary Data:");
+    console.log("Diary Symptom:");
     console.log(req.body);
     Diary.create({
-      symptom: req.body.symptom,
-      food: req.body.food,
-      drink: req.body.drink
+      symptom: req.body.symptom.type,
+      severity: req.body.symptom.severity
       //pages: req.body.pages
     });
 
+ // Add a diary food
+ app.post("/api/food", function(req, res) {
+
+    console.log("Diary Food:");
+    console.log(req.body);
+    Diary.create({
+      food: req.body.food.type
+  });
+  
+// Add a diary drink
+app.post("/api/drink", function(req, res) {
+
+    console.log("Diary Drink:");
+    console.log(req.body);
+    Diary.create({
+      drink: req.body.drink.type
   });
 
   // Delete a diary
