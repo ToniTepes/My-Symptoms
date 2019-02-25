@@ -1,5 +1,5 @@
 // Make a get request to our api route that will return complete diary
-$.get("/api/index", function(data) {
+$.get("/api/diary", function(data) {
   // For each diary entry that our server sends us back
   for (var i = 0; i < data.length; i++) {
     // Create a parent div to hold diary data

@@ -11,7 +11,7 @@ const Diary = require("../models/index.js");
 module.exports = function (app) {
 
     // Get all diarys
-    app.get("/api/all", function (req, res) {
+    app.get("/api/diary", function (req, res) {
 
         Diary.findAll({}).then(function (results) {
             res.json(results);
