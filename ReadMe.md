@@ -17,10 +17,10 @@ Usage of Dear Doctor is simple and intuitive. There is an Add Button, which prom
 ***
 ### Project Screenshots:
 Dear Doctor was created to bring along with you, keeping mobile first principles in mind. 
-![Home Page](../assets/images/mainpage.png)
-![Add Page](../assets/images/addpage.png)
+![Home Page](/public/assets/images/mainpage.png)
+![Add Page](/public/assets/images/addpage.png)
 <!-- Update Diary Page Screenshot when application is fully developed -->
-![Diary Page](../assets/images/diarypage.png)
+![Diary Page](/public/assets/images/diarypage.png)
 ***
 ### New Technologies Used:
 * Authentication
