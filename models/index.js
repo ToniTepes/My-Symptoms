@@ -10,16 +10,13 @@ var sequelize = require("../config/config.js");
 var Diary = sequelize.define("diary", {
   symptom: {
     type: Sequelize.JSON, 
-    severity: Sequelize.JSON, 
-    createdAt: Sequelize.DATE, defaultValue: Sequelize.NOW
+    severity: Sequelize.JSON
   },
   food: {
-    type: Sequelize.JSON, 
-    createdAt: Sequelize.DATE, defaultValue: Sequelize.NOW
+    type: Sequelize.JSON
   },
   drink: {
-    type: Sequelize.JSON, 
-    createdAt: Sequelize.DATE, defaultValue: Sequelize.NOW
+    type: Sequelize.JSON
   }
 }, {
   freezeTableName: true

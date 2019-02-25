@@ -101,8 +101,8 @@ module.exports = function (app) {
 
         console.log("Diary Symptom:");
         console.log(req.body);
-        let data = {symptom: req.body.drink,
-                    severity: req.body.symptom.severity};
+        let data = {symptom: req.body.symptom,
+                    severity: req.body.severity};
     Diary.create(data).then(function (results) {
       res.json(results);
         //Diary.symptom.create({
