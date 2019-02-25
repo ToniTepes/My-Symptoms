@@ -9,16 +9,16 @@ var sequelize = require("../config/config.js");
 // Creates a "Diary" model that matches up with DB
 var Diary = sequelize.define("diary", {
   symptom: {
-    type: Sequelize.STRING, allowNull: true,
-    severity: Sequelize.STRING, allowNull: true,
+    type: Sequelize.JSON, 
+    severity: Sequelize.JSON, 
     createdAt: Sequelize.DATE, defaultValue: Sequelize.NOW
   },
   food: {
-    type: Sequelize.STRING, allowNull: true,
+    type: Sequelize.JSON, 
     createdAt: Sequelize.DATE, defaultValue: Sequelize.NOW
   },
   drink: {
-    type: Sequelize.STRING, allowNull: true,
+    type: Sequelize.JSON, 
     createdAt: Sequelize.DATE, defaultValue: Sequelize.NOW
   }
 }, {

@@ -4,8 +4,7 @@
 
 // Dependencies
 // =============================================================
-var Diary = require("../models/index.js");
-
+const Diary = require("../models/index.js");
 
 // Routes
 // =============================================================
@@ -21,7 +20,7 @@ module.exports = function (app) {
     });
 
     // Get a specific diary
-    app.get("/api/:diary", function (req, res) {
+    app.get("/api/diary", function (req, res) {
 
         if (req.params.diary) {
             Diary.findAll({
@@ -36,7 +35,7 @@ module.exports = function (app) {
     });
 
     // Get all diarys of a specific drink
-    app.get("/api/drink/:drink", function (req, res) {
+    app.get("/api/drink", function (req, res) {
 
         if (req.params.drink) {
             Diary.findAll({
@@ -51,7 +50,7 @@ module.exports = function (app) {
     });
 
     // Get all diarys from a specific food
-    app.get("/api/food/:food", function (req, res) {
+    app.get("/api/food", function (req, res) {
 
         if (req.params.food) {
             Diary.findAll({
@@ -102,9 +101,13 @@ module.exports = function (app) {
 
         console.log("Diary Symptom:");
         console.log(req.body);
-        Diary.create({
-            symptom: req.body.symptom.type,
-            severity: req.body.symptom.severity
+        let data = {symptom: req.body.drink,
+                    severity: req.body.symptom.severity};
+    Diary.create(data).then(function (results) {
+      res.json(results);
+        //Diary.symptom.create({
+        //    symptom: req.body.symptom.type,
+        //    severity: req.body.symptom.severity
             //pages: req.body.pages
         });
     });
@@ -114,8 +117,11 @@ module.exports = function (app) {
 
         console.log("Diary Food:");
         console.log(req.body);
-        Diary.create({
-            food: req.body.food.type
+        let data = {food: req.body.food};
+    Diary.create(data).then(function (results) {
+      res.json(results);
+        //Diary.food.create({
+        //    food: req.body.food.type
         });
     });
 
@@ -124,8 +130,11 @@ module.exports = function (app) {
 
         console.log("Diary Drink:");
         console.log(req.body);
-        Diary.create({
-            drink: req.body.drink.type
+        let data = {drink: req.body.drink};
+    Diary.create(data).then(function (results) {
+      res.json(results);
+        // Diary.drink.create({
+        //     drink: req.body.drink.type
         });
     });
 
