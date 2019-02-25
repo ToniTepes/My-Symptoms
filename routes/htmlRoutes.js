@@ -1,4 +1,4 @@
-var db = require("../models");
+var db = require("../models/diary.js");
 
 module.exports = function(app) {
   // Load index page

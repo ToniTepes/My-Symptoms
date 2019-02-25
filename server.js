@@ -40,8 +40,8 @@ require("./routes/html-routes.js")(app);
 require("./routes/auth")(app, passport);
 
 
-const models = require("./models");
-require("./config/passport/passport")(passport, models.User);
+// const models = require("./models");
+// require("./config/passport/passport")(passport, models.User);
 
 const syncOptions = {
   force: false

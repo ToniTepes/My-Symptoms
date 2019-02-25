@@ -4,7 +4,7 @@
 
 // Dependencies
 // =============================================================
-var Diary = require("../models/diary.js");
+var Diary = require("../models/index.js");
 
 
 // Routes
