@@ -16,6 +16,6 @@ $.get("/api/diary", function(data) {
     $("#diary-well-" + i).append("<td>" + (i + 1) + ". " + data[i].symptom + "</td>");
     $("#diary-well-" + i).append("<td>Food: " + data[i].food + "</td>");
     $("#diary-well-" + i).append("<td>Drink: " + data[i].drink + "</td>");
-    $("#diary-well-" + i).append("<td>On Date: " + createdAt + "</td>");
+    //$("#diary-well-" + i).append("<td>On Date: " + createdAt + "</td>");
   }
 });
