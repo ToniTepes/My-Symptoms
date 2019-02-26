@@ -3,9 +3,9 @@ const express = require("express");
 const passport = require("passport");
 const session = require("express-session");
 const flash = require("connect-flash");
-// const exphbs = require("express-handlebars");
-
 const db = require("./models");
+const moment = require("moment");
+moment().format();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
@@ -21,7 +21,7 @@ app.use(flash());
 // Passport
 app.use(
   session({
-    secret: 'clever girl', //process.env.SESSION_SECRET,
+    secret: process.env.SECRET_SESSION,
     resave: true,
     saveUnitialized: true
   })
@@ -29,27 +29,21 @@ app.use(
 app.use(passport.initialize());
 app.use(passport.session());
 
-// Handlebars
-// app.engine(
-//   "handlebars",
-//   exphbs({
-//     defaultLayout: "main"
-//   })
-// );
-// app.set("view engine", "handlebars");
+// ======= Routes =========
+// require("./routes/user-apiRoute")(app);
+// require("./routes/symptom-apiRoute")(app);
+// require("./routes/food-apiRoute")(app);
+// require("./routes/drink-apiRoute")(app);
+// require("./routes/diary-apiRoute")(app);
+// require("./routes/htmlRoutes")(app);
 
-// Routes
-require("./routes/user-apiRoute")(app);
-require("./routes/symptom-apiRoute")(app);
-require("./routes/food-apiRoute")(app);
-require("./routes/drink-apiRoute")(app);
-require("./routes/diary-apiRoute")(app);
-require("./routes/htmlRoutes")(app);
+require("./routes/api-routes.js")(app);
+require("./routes/html-routes.js")(app);
 require("./routes/auth")(app, passport);
 
 
-const models = require("./models");
-require("./config/passport/passport")(passport, models.User);
+// const models = require("./models");
+// require("./config/passport/passport")(passport, models.User);
 
 const syncOptions = {
   force: false
