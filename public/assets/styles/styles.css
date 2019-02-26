@@ -30,14 +30,20 @@ body {
   height: 40px;
 }
 
-#symptomcontainer,
+#deardoctor {
+  width: 70%; 
+  margin-bottom: 30%;
+  margin-top: 10%;
+}
+
+/* #symptomcontainer,
 #signincontainer,
 #addcontainer,
 #foodcontainer,
 #drinkcontainer,
 #addsymptomcontainer {
   margin-top: 40%
-}
+} */
 
 #signupcontainer {
   margin-top: 20%
@@ -121,6 +127,10 @@ body {
   color: #60c2a5;
 }
 
+#bold {
+  font-weight: bold; 
+}
+
 #signin {
   background-color: #ed6d73;
   border: 2px solid #2e2b35;
@@ -195,7 +205,7 @@ body {
     margin-bottom: 0 !important; 
   }
   
-  #mainimage {
+  #diarymainimage {
     width: 40%; 
   }
 
@@ -216,8 +226,17 @@ body {
 
 @media only screen and (max-width: 415px) and (min-width: 365px) {
   
-  #mainimage {
-    padding-top: 15%
+  #diarymainimage {
+    padding-top: 15%;
+    width: 40%;
+  }
+
+  #table {
+    margin: 5% 5% !important; 
+  }
+
+  #deardoctor {
+    margin-bottom: 10%; 
   }
 
   #addcontainer,
@@ -225,5 +244,29 @@ body {
   #foodcontainer,
   #addsymptomcontainer {
     padding-top: 15%;
+  }
+}
+
+@media only screen and (max-width: 414px) and (min-width: 320px) {
+  #table {
+    margin: 5% 5% !important; 
+  }
+
+  #diarymainimage {
+    width: 40%; 
+  }
+}
+
+@media only screen and (max-width: 1024px) and (min-width: 768px) {
+  #table {
+    margin: 5% 5% !important;
+  }
+
+  #deardoctor {
+    margin-bottom: 0; 
+  }
+
+  #diarymainimage {
+    width: 50%; 
   }
 }
