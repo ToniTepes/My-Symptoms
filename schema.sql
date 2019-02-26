@@ -15,16 +15,15 @@ CREATE TABLE IF NOT EXISTS `diary`
     ) 
     ENGINE=InnoDB;
 
-    --  CREATE TABLE `users`
---  	(
---  		user_id INTEGER AUTO_INCREMENT UNIQUE,
---  		email VARCHAR(150) UNIQUE,
---  		firstname VARCHAR(50) ,
---  		lastname VARCHAR(50) ,
---  		pass VARCHAR(255) ,
--- 		createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
--- 		updatedAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
---  		-- heal_id INTEGER,
---  		PRIMARY KEY(user_id)
---  		-- FOREIGN KEY(heal_id) REFERENCES patientInfo(heal_id)
---  	);
+CREATE TABLE IF NOT EXISTS `user` 
+(
+	`id` INTEGER NOT NULL auto_increment ,
+	firstname JSON DEFAULT NULL,
+	lastname JSON DEFAULT NULL,
+	email JSON DEFAULT NULL,
+	pass JSON DEFAULT NULL,
+    `createdAt` DATETIME NOT NULL, 
+    `updatedAt` DATETIME NOT NULL, 
+	PRIMARY KEY(id)
+    ) 
+    ENGINE=InnoDB;
