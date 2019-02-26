@@ -13,11 +13,16 @@ body {
 }
 
 .logo-image,
-.logo-image2 {
+.logo-image2
+  {
   padding-right: 5%;
   padding-left: 5%;
   padding-top: 10%;
   margin-bottom: 0px;
+}
+
+.logo-image2 {
+  width: 40%;
 }
 
 .control {
@@ -192,12 +197,14 @@ body {
 
 @media only screen and (min-width: 1025px) {
   .logo-image,
-  .logo-image2 {
+  .logo-image2 
+  {
     padding-top: 0;
     margin-bottom: 0 !important; 
   }
   
-  #mainimage {
+  #mainimage,
+  #deardoctor {
     width: 40%; 
   }
 
@@ -218,8 +225,13 @@ body {
 
 @media only screen and (max-width: 415px) and (min-width: 365px) {
   
-  #mainimage {
+  #mainimage,
+  #deardoctor {
     padding-top: 15%
+  }
+
+  .logo-image2 {
+    width: 40%;
   }
 
   #addcontainer,
