@@ -49,6 +49,10 @@ body {
   margin-top: 20%
 }
 
+#mainimage {
+  width: 40%; 
+}
+
 #add,
 #search {
   height: 100px;
