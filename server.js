@@ -17,15 +17,17 @@ app.use(express.static("public"));
 app.use(flash());
 
 // Passport
-app.use(
-  session({
-    secret: process.env.SECRET_SESSION,
-    resave: true,
-    saveUnitialized: true
-  })
-);
+// app.use(
+//   session({
+//     secret: process.env.SECRET_SESSION,
+//     resave: true,
+//     saveUnitialized: true
+//   })
+// );
 app.use(passport.initialize());
 app.use(passport.session());
+
+app.use(require('express-session')({ secret: 'keyboard cat', resave: true, saveUninitialized: true }));
 
 // ======= Routes =========
 // require("./routes/user-apiRoute")(app);

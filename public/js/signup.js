@@ -7,7 +7,7 @@ $(document).ready(function() {
   var passwordInput = $("#password");
 
   // When the signup button is clicked, we validate the email and password are not blank
-  signUpForm.on("click", function(event) {
+  signUpForm.click(function() {
     event.preventDefault();
     var userData = {
       firstName: firstName.val().trim(),
@@ -37,6 +37,7 @@ $(document).ready(function() {
       password: password
     }).then(function(data) {
       window.location.replace(data);
+      console.log(userData);
       // If there's an error, handle it by throwing up a boostrap alert
     }).catch(handleLoginErr);
   }
