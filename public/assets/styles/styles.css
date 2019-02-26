@@ -45,6 +45,10 @@ body {
   margin-top: 40%
 } */
 
+#addpage {
+  margin-top: 30%; 
+}
+
 #signupcontainer {
   margin-top: 20%
 }
@@ -204,7 +208,8 @@ body {
 }
 
 @media only screen and (min-width: 1025px) {
-  .logo-image {
+  .logo-image,
+  .logo-image2 {
     padding-top: 0;
     margin-bottom: 0 !important; 
   }
@@ -218,13 +223,22 @@ body {
   }
 
   #symptomcontainer,
-  #signupcontainer,
+  /* #signupcontainer, */
   /* #signincontainer, */
-  #addcontainer,
+  /* #addcontainer, */
   #foodcontainer,
-  #drinkcontainer,
+  #drinkcontainer {
+  /* #addsymptomcontainer { */
+    margin-top: 10%;
+  }
+
+  #signupcontainer {
+    margin-top: 0; 
+  }
+
+  #addpage,
   #addsymptomcontainer {
-    margin-top: 10%
+    margin-top: 5%;
   }
 }
 
@@ -249,9 +263,14 @@ body {
 
   #addcontainer,
   #drinkcontainer,
-  #foodcontainer,
-  #addsymptomcontainer {
+  #foodcontainer {
     padding-top: 15%;
+  }
+
+  #addsymptomcontainer,
+  #foodcontainer,
+  #drinkcontainer {
+    margin-top: 20%; 
   }
 
   #signincontainer {
@@ -287,6 +306,11 @@ body {
   #signupcontainer {
     margin-top: 10%; 
   }
+  #addsymptomcontainer,
+  #foodcontainer,
+  #drinkcontainer {
+    margin-top: 30%; 
+  }
 }
 
 @media only screen and (max-width: 1024px) and (min-width: 768px) {
@@ -306,7 +330,10 @@ body {
     width: 80%; 
   }
 
-  #signincontainer {
+  #signincontainer,
+  #addsymptomcontainer,
+  #foodcontainer,
+  #drinkcontainer {
     margin-top: 30%;
   }
 }
