@@ -19,7 +19,7 @@ USE `deardoctor_db`;
 
 CREATE TABLE `diary` 
 (
-	`id` INTEGER NOT NULL PRIMARY KEY, 
+	`id` INTEGER not null auto_increment PRIMARY KEY, 
     `symptom` JSON DEFAULT NULL, 
     `food` JSON DEFAULT NULL, 
     `drink` JSON DEFAULT NULL, 
