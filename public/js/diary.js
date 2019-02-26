@@ -11,11 +11,27 @@ $.get("/api/diary", function(data) {
     // Append the well to the well section
     $("#well-section").append(wellSection);
 
+    let currentTime = data[i].createdAt; 
+
+    // let formatedTime = moment("currentTime").format("DD MM YYYY");
+
     // Now  we add our diary data to the well we just placed on the page
     // eslint-disable-next-line prettier/prettier
-    $("#diary-well-" + i).append("<td>" + (i + 1) + ". " + data[i].symptom + "</td>");
-    $("#diary-well-" + i).append("<td>Food: " + data[i].food + "</td>");
-    $("#diary-well-" + i).append("<td>Drink: " + data[i].drink + "</td>");
+    
+    if (data[i].symptom !== null) { 
+      $("#diary-well-" + i).append("<td>" + currentTime+ "</td>");
+      $("#diary-well-" + i).append("<td>Symptom: " + data[i].symptom + "</td>");
+    } else if (data[i].food !== null) {
+      $("#diary-well-" + i).append("<td>" + currentTime + "</td>");
+      $("#diary-well-" + i).append("<td>Food: " + data[i].food + "</td>");
+    } else if (data[i].drink !== null) {
+      $("#diary-well-" + i).append("<td>" + currentTime + "</td>");
+      $("#diary-well-" + i).append("<td>Drink: " + data[i].drink + "</td>");
+    }
+
+    // $("#diary-well-" + i).append("<td>" + (i + 1) + ". " + data[i].symptom + "</td>");
+    // $("#diary-well-" + i).append("<td>Food: " + data[i].food + "</td>");
+    // $("#diary-well-" + i).append("<td>Drink: " + data[i].drink + "</td>");
     //$("#diary-well-" + i).append("<td>On Date: " + createdAt + "</td>");
   }
 });

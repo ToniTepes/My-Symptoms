@@ -4,6 +4,8 @@ const passport = require("passport");
 const session = require("express-session");
 const flash = require("connect-flash");
 const db = require("./models");
+const moment = require("moment");
+moment().format();
 
 const app = express();
 const PORT = process.env.PORT || 3000;
