@@ -12,22 +12,12 @@ body {
   background-attachment: fixed;
 }
 
-.logo-image {
-  padding-right: 5%;
-  padding-left: 5%;
-  padding-top: 10%;
-  margin-bottom: 0px;
-}
-
+.logo-image,
 .logo-image2 {
   padding-right: 5%;
   padding-left: 5%;
   padding-top: 10%;
   margin-bottom: 0px;
-}
-
-#deardoctorsignup {
-  padding-top: 0; 
 }
 
 .control {
@@ -47,7 +37,7 @@ body {
 #foodcontainer,
 #drinkcontainer,
 #addsymptomcontainer {
-  margin-top: 20%
+  margin-top: 40%
 }
 
 #signupcontainer {
