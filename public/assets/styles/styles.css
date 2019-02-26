@@ -259,6 +259,7 @@ body {
 
   #deardoctor {
     margin-bottom: 10%; 
+    width: 100%;
   }
 
   #addcontainer,
@@ -285,6 +286,7 @@ body {
 
   #deardoctor {
     margin-bottom: 0; 
+    width: 100%; 
   }
 
   #mainimage {
@@ -300,12 +302,17 @@ body {
   }
 
   #signincontainer {
-    margin-top: 20%;
+    margin-top: 10%;
   }
 
   #signupcontainer {
-    margin-top: 10%; 
+    margin-top: 0; 
   }
+
+  #signupblock {
+    margin-bottom: 5%; 
+  }
+
   #addsymptomcontainer,
   #foodcontainer,
   #drinkcontainer {
@@ -319,7 +326,8 @@ body {
   }
 
   #deardoctor {
-    margin-bottom: 0; 
+    margin-bottom: 0;
+    width: 100%;
   }
 
   #diarymainimage {
