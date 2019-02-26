@@ -9,7 +9,7 @@ var sequelize = require("../config/config.js");
 // Creates a "Diary" model that matches up with DB
 var Diary = sequelize.define("diary", {
   symptom: {
-    type: Sequelize.JSON, 
+    type: Sequelize.JSON,
     severity: Sequelize.JSON
   },
   food: {
@@ -21,6 +21,14 @@ var Diary = sequelize.define("diary", {
 }, {
   freezeTableName: true
 });
+
+Diary.associate = models => {
+  Diary.belongsTo(models.User, {
+    foreignKey: {
+      allowNull: false
+    }
+  });
+};
 
 // Syncs with DB
 Diary.sync();
