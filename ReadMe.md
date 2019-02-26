@@ -4,7 +4,7 @@
 * [Sydney Dunlap](https://github.com/syddunlap)
 * [Antonio Foushee](https://github.com/TonyTepes)
 * [Laura Shortridge](https://github.com/LauraShortridge) 
-* [Robert Tarkenton](danger-academy)	
+* [Robert Tarkenton](https://github.com/danger-academy)	
 ***
 ### Application Description:
 Dear Doctor is an application made to give people the ability to record intake (food & drink) as well as symptoms. This information will be presented in table form to be shared with the user's healthcare provider in order to find potential correlations between symptoms and intake over time.
