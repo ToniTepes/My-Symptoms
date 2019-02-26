@@ -9,7 +9,10 @@ var config = require(__dirname + '/../config/config.js')[env];
 var db = {};
 
 if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize('database', 'username', 'password');
+  sequelize = new Sequelize('database', 'username', 'password', {
+    dialect: 'mysql',
+    operatorsAliases: false
+  });
 } else if (process.env.DATABASE_NAME) {
   var sequelize = new Sequelize('database', 'username', 'password', {
     host: 'localhost',
