@@ -252,6 +252,14 @@ body {
     margin: 5% 5% !important; 
   }
 
+  #deardoctor {
+    margin-bottom: 0; 
+  }
+
+  .logo-image2 {
+    margin-bottom: 0 !important; 
+  }
+
   #diarymainimage {
     width: 40%; 
   }
