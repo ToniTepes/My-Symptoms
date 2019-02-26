@@ -66,6 +66,7 @@ body {
 .addButtons,
 #symptomadd,
 #signupsubmit,
+#signinsubmit,
 #signupbutton,
 #foodadd,
 #drinkadd {
@@ -152,6 +153,7 @@ body {
 .addButtons:hover,
 #symptomadd:hover,
 #signupsubmit:hover,
+#signinsubmit:hover,
 #signupbutton:hover,
 #foodadd:hover,
 #drinkadd:hover, #symptomadd:hover {
@@ -181,6 +183,7 @@ body {
 .addButtons:active,
 #symptomadd:active,
 #signupsubmit:active,
+#signinsubmit:active,
 #signupbutton:active,
 #foodadd:active,
 #drinkadd:active, #symptomadd:active {
