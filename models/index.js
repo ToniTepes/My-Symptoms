@@ -1,29 +1,42 @@
-// Dependencies
-// =============================================================
+"use strict";
 
-// Sequelize (capital) references the standard library
-var Sequelize = require("sequelize");
-// sequelize (lowercase) references my connection to the DB.
-var sequelize = require("../config/config.js");
+const fs = require("fs");
+const path = require("path");
+const Sequelize = require("sequelize");
+const basename = path.basename(module.filename);
+const env = process.env.NODE_ENV || "development";
+const config = require("../config/config.js")[env];
+const db = {};
+let sequelize;
+if (config.jawsDB) {
+  sequelize = new Sequelize(process.env[config.jawsDB]);
+} else {
+  sequelize = new Sequelize(
+    config.database,
+    config.username,
+    config.password,
+    config
+  );
+}
 
-// Creates a "Diary" model that matches up with DB
-var Diary = sequelize.define("diary", {
-  symptom: {
-    type: Sequelize.JSON, 
-    severity: Sequelize.JSON
-  },
-  food: {
-    type: Sequelize.JSON
-  },
-  drink: {
-    type: Sequelize.JSON
+fs.readdirSync(__dirname)
+  .filter(function(file) {
+    return (
+      file.indexOf(".") !== 0 && file !== basename && file.slice(-3) === ".js"
+    );
+  })
+  .forEach(function(file) {
+    const model = sequelize.import(path.join(__dirname, file));
+    db[model.name] = model;
+  });
+
+Object.keys(db).forEach(function(modelName) {
+  if (db[modelName].associate) {
+    db[modelName].associate(db);
   }
-}, {
-  freezeTableName: true
 });
 
-// Syncs with DB
-Diary.sync();
+db.sequelize = sequelize;
+db.Sequelize = Sequelize;
 
-// Makes the Diary Model available for other files (will also create a table)
-module.exports = Diary;
+module.exports = db;
