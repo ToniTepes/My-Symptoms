@@ -7,7 +7,14 @@ require('dotenv').config();
 var Sequelize = require("sequelize");
 
 // Creates mySQL connection using Sequelize
-var sequelize = new Sequelize(process.env.DATABASE_NAME, "root", process.env.DATABASE_PASSWORD, {
+
+if (process.env.JAWSDB_URL) {
+  sequelize = new Sequelize(process.env.JAWSDB_URL, {
+    dialect: 'mysql',
+    operatorsAliases: false
+  });
+} else {
+  var sequelize = new Sequelize(process.env.DATABASE_NAME, "root", process.env.DATABASE_PASSWORD, {
   host: "localhost",
   port: 3306,
   dialect: "mysql",
@@ -17,6 +24,7 @@ var sequelize = new Sequelize(process.env.DATABASE_NAME, "root", process.env.DAT
     idle: 10000
   }
 });
+}
 
 // Exports the connection for other files to use
 module.exports = sequelize;
