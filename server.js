@@ -2,7 +2,7 @@ require("dotenv").config();
 const express = require("express");
 const passport = require("passport");
 const session = require("express-session");
-const flash = require("connect-flash");
+//const flash = require("connect-flash");
 const db = require("./models");
 const moment = require("moment");
 moment().format();
@@ -16,7 +16,7 @@ app.use(express.urlencoded({
 }));
 app.use(express.json());
 app.use(express.static("public"));
-app.use(flash());
+//app.use(flash());
 
 // Passport
 app.use(
@@ -36,10 +36,9 @@ app.use(passport.session());
 // require("./routes/drink-apiRoute")(app);
 // require("./routes/diary-apiRoute")(app);
 // require("./routes/htmlRoutes")(app);
-
 require("./routes/api-routes.js")(app);
 require("./routes/html-routes.js")(app);
-require("./routes/auth")(app, passport);
+require("./routes/user-apiRoutes.js"); //(app, passport);
 
 
 // const models = require("./models");
