@@ -9,7 +9,7 @@ var Sequelize = require("sequelize");
 // Creates mySQL connection using Sequelize
 
 if (process.env.JAWSDB_URL) {
-  sequelize = new Sequelize('database', 'username', 'password', {
+  sequelize = new Sequelize(process.env.JAWSDB_URL, {
     dialect: 'mysql',
     operatorsAliases: false
   });
