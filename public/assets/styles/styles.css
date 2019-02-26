@@ -31,9 +31,9 @@ body {
 }
 
 #deardoctor {
-  width: 70%; 
-  margin-bottom: 30%;
-  margin-top: 10%;
+  width: 40%; 
+  margin-bottom: 0;
+  margin-top: 3%;
 }
 
 /* #symptomcontainer,
@@ -219,7 +219,7 @@ body {
 
   #symptomcontainer,
   #signupcontainer,
-  #signincontainer,
+  /* #signincontainer, */
   #addcontainer,
   #foodcontainer,
   #drinkcontainer,
@@ -239,6 +239,10 @@ body {
     margin: 5% 5% !important; 
   }
 
+  #mainimage {
+    width: 100%; 
+  }
+
   #deardoctor {
     margin-bottom: 10%; 
   }
@@ -248,6 +252,10 @@ body {
   #foodcontainer,
   #addsymptomcontainer {
     padding-top: 15%;
+  }
+
+  #signincontainer {
+    margin-top: 30%;
   }
 }
 
@@ -260,12 +268,24 @@ body {
     margin-bottom: 0; 
   }
 
+  #mainimage {
+    width: 100%; 
+  }
+
   .logo-image2 {
     margin-bottom: 0 !important; 
   }
 
   #diarymainimage {
     width: 40%; 
+  }
+
+  #signincontainer {
+    margin-top: 20%;
+  }
+
+  #signupcontainer {
+    margin-top: 10%; 
   }
 }
 
@@ -280,5 +300,13 @@ body {
 
   #diarymainimage {
     width: 50%; 
+  }
+
+  #mainimage {
+    width: 80%; 
+  }
+
+  #signincontainer {
+    margin-top: 30%;
   }
 }
