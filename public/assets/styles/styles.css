@@ -12,6 +12,14 @@ body {
   background-attachment: fixed;
 }
 
+.emptyspace {
+  height: 20%; 
+}
+
+.wrapper {
+  height: 80%; 
+}
+
 .logo-image {
   padding-right: 5%;
   padding-left: 5%;
@@ -245,7 +253,7 @@ body {
 @media only screen and (max-width: 415px) and (min-width: 365px) {
   
   #diarymainimage {
-    padding-top: 15%;
+    padding-top: 10%;
     width: 40%;
   }
 
@@ -299,6 +307,7 @@ body {
 
   #diarymainimage {
     width: 40%; 
+    padding-top: 5%;
   }
 
   #signincontainer {
